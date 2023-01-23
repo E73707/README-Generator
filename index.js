@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-
+const badge = "https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>";
 inquirer
   .prompt([
     {
@@ -15,11 +15,6 @@ inquirer
     },
     {
       type: "input",
-      message: "write a table of contents",
-      name: "table of contents",
-    },
-    {
-      type: "input",
       message: "write installation instructions",
       name: "installation",
     },
@@ -29,9 +24,19 @@ inquirer
       name: "usage",
     },
     {
-      type: "input",
-      message: "write a license message",
+      type: "list",
+      message: "choose a license",
       name: "license",
+      choices: [
+        "MIT",
+        "GPLv2",
+        "Apache",
+        "GPLv3",
+        "BSD 3-clause",
+        "Unlicense",
+        "BSD 2-clause",
+        "LGPLv3",
+      ],
     },
     {
       type: "input",
@@ -40,26 +45,62 @@ inquirer
     },
     {
       type: "input",
-      message: "list the names of contributors",
+      message: "tests",
       name: "tests",
     },
     {
       type: "input",
-      message: "questions",
-      name: "questions",
+      message: "Enter github username",
+      name: "github",
+    },
+    {
+      type: "input",
+      message: "enter your email",
+      name: "email",
     },
   ])
   .then((response) => {
     const {
       title,
       description,
-      tableOfContents,
       installation,
       usage,
       license,
       contributing,
       tests,
-      questions,
+      github,
+      email,
     } = response;
-    const readMe = ``;
+    const readMe = `# ${title} $~~~~~~~~~~~$ <img src = 'https://img.shields.io/badge/license-${license}-red'/> \n 
+    \n## description\n
+    \n${description}\n
+    \n## Table of contents\n
+    \n* [description](#description)\n
+    \n* [installation](#installation)\n
+    \n* [usage](#usage)\n
+    \n*[license](#license)\n
+    \n* [contributing](#contributing)\n
+    \n* [tests](#tests)\n
+    \n* [questions](#questions)\n
+    \n## Installation\n
+    \n${installation}\n
+    \n## usage\n
+    \n${usage}\n
+    \n## license\n
+    \n${license}\n
+    \n## contributing\n
+    \n${contributing}\n
+    \n## tests\n
+    \n${tests}\n
+    \n## questions\n
+    \ngithub profile: https://github.com/${github}\n
+    \nemail me ${email}`;
+
+    createReadMe(readMe);
   });
+
+function createReadMe(readMe) {
+  fs.writeFile("README.md", readMe, (err) => {
+    console.log(err);
+  });
+}

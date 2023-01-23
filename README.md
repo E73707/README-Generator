@@ -58,8 +58,9 @@ Edward Vaughan
     
 ## tests
 
-below is a video testing the functionality of the application
+below is a video testing the functionality of the application and an image of the resulting README file
 https://watch.screencastify.com/v/KN66qDdQVAnrnEsugJC1
+![2023-01-23 (2)](https://user-images.githubusercontent.com/94885681/213970323-ed46de73-a625-4b21-9a4c-8baa2274c588.png)
 
     
 ## questions

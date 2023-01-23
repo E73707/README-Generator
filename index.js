@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const badge = "https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>";
+const { type } = require("os");
+
 inquirer
   .prompt([
     {
@@ -14,8 +15,8 @@ inquirer
       name: "description",
     },
     {
-      type: "input",
-      message: "write installation instructions",
+      type: "editor",
+      message: "write installation instructions (close text editor to submit)",
       name: "installation",
     },
     {
@@ -44,8 +45,8 @@ inquirer
       name: "contributing",
     },
     {
-      type: "input",
-      message: "tests",
+      type: "editor",
+      message: "tests (to submit, exit text editor when complete)",
       name: "tests",
     },
     {
@@ -71,14 +72,14 @@ inquirer
       github,
       email,
     } = response;
-    const readMe = `# ${title} $~~~~~~~~~~~$ <img src = 'https://img.shields.io/badge/license-${license}-red'/> \n 
+    const readMe = `# ${title}  <img src = 'https://img.shields.io/badge/license-${license}-red'/> \n 
     \n## description\n
     \n${description}\n
     \n## Table of contents\n
     \n* [description](#description)\n
     \n* [installation](#installation)\n
     \n* [usage](#usage)\n
-    \n*[license](#license)\n
+    \n* [license](#license)\n
     \n* [contributing](#contributing)\n
     \n* [tests](#tests)\n
     \n* [questions](#questions)\n
@@ -94,7 +95,7 @@ inquirer
     \n${tests}\n
     \n## questions\n
     \ngithub profile: https://github.com/${github}\n
-    \nemail me ${email}`;
+    \nemail me: ${email}`;
 
     createReadMe(readMe);
   });

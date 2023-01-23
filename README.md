@@ -66,7 +66,10 @@ https://watch.screencastify.com/v/KN66qDdQVAnrnEsugJC1
 ## questions
 
 below is a link to my github
+
 github profile: https://github.com/e73707
 
+
 to contact me use the email below
+
 email me: eddivaughan@gmail.com

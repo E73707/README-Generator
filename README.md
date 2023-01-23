@@ -1,70 +1,43 @@
-# readme generator $~~~~~~~~~~~$ <img src = 'https://img.shields.io/badge/license-MIT-red'/> 
- 
-    
+# readme generator <img src = 'https://img.shields.io/badge/license-MIT-red'/>
+
 ## description
 
-    
-a
+n/a
 
-    
 ## Table of contents
 
-    
-*[description](#description)
+- [description](#description)
+- [installation](#installation)
+- [usage](#usage)
+- [license](#license)
+- [contributing](#contributing)
+- [tests](#tests)
+- [questions](#questions)
 
-    
-*[installation](#installation)
-
-    
-*[usage](#usage)
-
-    
-*[license](#license)
-
-    
-*[contributing](#contributing)
-
-    
-*[tests](#tests)
-
-    
-*[questions](#questions)
-
-    
 ## Installation
 
-    
-a
+n/a
 
-    
 ## usage
 
-    
-a
+n/a
 
-    
 ## license
 
-    
 MIT
 
-    
 ## contributing
 
-    
-a
+edward
 
-    
 ## tests
 
-    
-a
+1. this is step 1
+2. this is step 2
+3. this is step 3
 
-    
 ## questions
 
-    
-github profile: https://github.com/a
+github profile: https://github.com/
 
-    
-email me a
+email me eddivaughan@gmail.com

@@ -16,7 +16,8 @@ inquirer
     },
     {
       type: "editor",
-      message: "write installation instructions (close text editor to submit)",
+      message:
+        "write installation instructions (close and save text editor to submit)",
       name: "installation",
     },
     {
@@ -46,7 +47,7 @@ inquirer
     },
     {
       type: "editor",
-      message: "tests (to submit, exit text editor when complete)",
+      message: "tests (close and save text editor to submit)",
       name: "tests",
     },
     {
